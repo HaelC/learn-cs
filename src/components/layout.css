@@ -18,6 +18,12 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
 }
 
 li {

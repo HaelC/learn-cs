@@ -1,7 +1,33 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const result = await graphql(`
+    query {
+      allMdx {
+        nodes {
+          parent {
+            ... on File {
+              name
+              relativeDirectory
+            }
+          }
+        }
+      }
+    }
+  `);
 
-// You can delete this file if you're not using it
+  if (result.errors) {
+    reporter.panic("failed to create pages", result.errors);
+  }
+
+  const nodes = result.data.allMdx.nodes;
+
+  nodes.forEach(node => {
+    const path = node.parent.relativeDirectory + "/" + node.parent.name;
+    actions.createPage({
+      path: path,
+      component: require.resolve("./src/templates/course.js"),
+      context: {
+        slug: node.parent.name,
+      },
+    });
+  });
+};

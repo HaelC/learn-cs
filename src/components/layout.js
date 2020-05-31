@@ -61,22 +61,28 @@ const Layout = ({ children }) => {
           max-width: 960px;
         `}
       >
-        <main>{children}</main>
+        <main
+          css={css`
+            min-height: 85vh;
+            margin-bottom: 1rem;
+          `}
+        >
+          {children}
+        </main>
         <footer
           css={css`
-            position: fixed;
-            bottom: 0px;
+            /* position: fixed;
+            bottom: 0px; */
             height: 30px;
             font-size: 14px;
             width: 100%;
             max-width: 960px;
             color: #999;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
           `}
         >
-          © {new Date().getFullYear()} by Hael <Link to="/">About</Link>{" "}
-          <Link to="/">Contact</Link>
+          © {new Date().getFullYear()} by&nbsp; <Link to="/about">Hael</Link>
         </footer>
       </div>
     </>

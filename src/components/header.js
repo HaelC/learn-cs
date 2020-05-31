@@ -39,7 +39,13 @@ const Header = ({ siteTitle }) => (
         padding-left: 2rem;
       `}
     >
-      <h3>{siteTitle}</h3>
+      <h3
+        css={css`
+          margin: 0;
+        `}
+      >
+        {siteTitle}
+      </h3>
     </Link>
     <nav>
       <NavLink to="/curriculum" activeClassName="current-page">
