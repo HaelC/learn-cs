@@ -3,6 +3,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     query {
       allMdx {
         nodes {
+          frontmatter {
+            slug
+          }
           parent {
             ... on File {
               name
@@ -21,12 +24,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const nodes = result.data.allMdx.nodes;
 
   nodes.forEach(node => {
-    const path = node.parent.relativeDirectory + "/" + node.parent.name;
     actions.createPage({
-      path: path,
+      path: node.frontmatter.slug,
       component: require.resolve("./src/templates/course.js"),
       context: {
-        slug: node.parent.name,
+        slug: node.frontmatter.slug,
       },
     });
   });
