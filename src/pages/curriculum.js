@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../../components/layout";
-import School from "../../components/school";
+import Layout from "../components/layout";
+import School from "../components/school";
 
 export default () => {
   return (
