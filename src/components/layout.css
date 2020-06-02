@@ -33,3 +33,7 @@ li {
 .section-header {
   margin: 1rem;
 }
+
+main a {
+  color: #666;
+}

@@ -5,12 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         nodes {
           frontmatter {
             slug
-          }
-          parent {
-            ... on File {
-              name
-              relativeDirectory
-            }
+            type
           }
         }
       }
@@ -26,7 +21,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   nodes.forEach(node => {
     actions.createPage({
       path: node.frontmatter.slug,
-      component: require.resolve("./src/templates/course.js"),
+      component: require.resolve(`./src/templates/${node.frontmatter.type}.js`),
       context: {
         slug: node.frontmatter.slug,
       },
