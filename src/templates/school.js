@@ -1,7 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { css } from "@emotion/core";
-// import SEO from "../components/seo";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
 
