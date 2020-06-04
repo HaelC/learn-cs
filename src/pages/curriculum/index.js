@@ -1,8 +1,28 @@
 import React from "react";
 import Layout from "../../components/layout";
 import School from "../../components/school";
+import { graphql } from "gatsby";
+import CourseList from "../../components/courseList";
 
-export default () => {
+export const query = graphql`
+  query {
+    allMdx(
+      filter: { frontmatter: { type: { eq: "course" } } }
+      sort: { fields: frontmatter___course_number }
+    ) {
+      nodes {
+        frontmatter {
+          school
+          course_name
+          course_number
+        }
+      }
+    }
+  }
+`;
+
+const CurriculumIndex = ({ data }) => {
+  const courses = data.allMdx.nodes;
   return (
     <Layout>
       <h2>Curriculum of Top Universities in Computer Science</h2>
@@ -15,7 +35,10 @@ export default () => {
         Here I just list the top 4 cs universities. Might include more in the
         future.
       </p>
-      <h3 className="section-header">Courses</h3>
+      <h3 className="section-header">Selected Courses</h3>
+      <CourseList courses={courses} />
     </Layout>
   );
 };
+
+export default CurriculumIndex;

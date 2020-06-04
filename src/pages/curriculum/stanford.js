@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../../components/layout";
+import CourseList from "../../components/courseList";
 
 export const query = graphql`
   query {
@@ -34,7 +35,7 @@ export default function Stanford({ data }) {
         Here is the link of computer science courses at Stanford University.
         https://cs.stanford.edu/academics/courses
       </p>
-      <ul>
+      {/* <ul>
         {nodes.map(node => (
           <li key={node.frontmatter.slug}>
             <Link to={node.frontmatter.slug}>
@@ -44,7 +45,8 @@ export default function Stanford({ data }) {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
+      <CourseList courses={nodes} />
       <h3>YouTube</h3>
       <p>
         There are several YouTube channels about Stanford University. Here are

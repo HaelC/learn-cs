@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import CourseList from "../components/courseList";
 
 export const query = graphql`
   query($tag: String) {
@@ -25,16 +26,7 @@ const Tags = ({ data }) => {
   return (
     <Layout>
       <h2>Courses</h2>
-      <ul>
-        {courses.nodes.map(course => (
-          <li key={course.frontmatter.slug}>
-            <Link to={course.frontmatter.slug}>
-              {course.frontmatter.school}: {course.frontmatter.course_number}{" "}
-              {course.frontmatter.course_name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <CourseList courses={courses.nodes} />
     </Layout>
   );
 };
