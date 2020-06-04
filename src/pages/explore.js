@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import kebabCase from "lodash/kebabCase";
@@ -35,6 +36,19 @@ const Explore = ({
       </ul>
     </Layout>
   );
+};
+
+Explore.propTypes = {
+  data: PropTypes.shape({
+    tags: PropTypes.shape({
+      group: PropTypes.arrayOf(
+        PropTypes.shape({
+          fieldValue: PropTypes.string.isRequired,
+          totalCount: PropTypes.number.isRequired,
+        }).isRequired
+      ),
+    }),
+  }),
 };
 
 export default Explore;

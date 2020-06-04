@@ -1,5 +1,6 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import CourseList from "../../components/courseList";
 
@@ -25,7 +26,7 @@ export const query = graphql`
   }
 `;
 
-export default function Stanford({ data }) {
+const Stanford = ({ data }) => {
   const nodes = data.allMdx.nodes;
   return (
     <Layout>
@@ -93,4 +94,10 @@ export default function Stanford({ data }) {
       </blockquote>
     </Layout>
   );
-}
+};
+
+Stanford.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export default Stanford;
