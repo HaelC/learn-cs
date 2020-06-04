@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
       <NavLink to="/media" activeClassName="current-page">
         Media
       </NavLink>
-      <NavLink to="/tag" activeClassName="current-page">
+      <NavLink to="/explore" activeClassName="current-page">
         Explore
       </NavLink>
     </nav>
