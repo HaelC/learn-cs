@@ -23,12 +23,12 @@ const Explore = ({
   group.sort((a, b) => b.totalCount - a.totalCount);
   return (
     <Layout>
-      <h2>TOPICS</h2>
+      <h2>TAGS</h2>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tag/${kebabCase(tag.fieldValue)}`}>
-              {tag.fieldValue}
+              {tag.fieldValue === "Cpp" ? "C++" : tag.fieldValue}
             </Link>
             ({tag.totalCount})
           </li>

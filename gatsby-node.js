@@ -5,7 +5,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     query {
-      content: allMdx {
+      content: allMdx(
+        filter: { frontmatter: { type: { nin: ["official", "school"] } } }
+      ) {
         nodes {
           frontmatter {
             slug

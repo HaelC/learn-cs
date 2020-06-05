@@ -2,9 +2,15 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import CourseList from "../components/courseList";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 export const query = graphql`
   query($tag: String) {
+    official: mdx(
+      frontmatter: { tags: { eq: $tag }, type: { eq: "official" } }
+    ) {
+      body
+    }
     courses: allMdx(
       filter: { frontmatter: { tags: { in: [$tag] }, type: { eq: "course" } } }
     ) {
@@ -22,11 +28,21 @@ export const query = graphql`
 `;
 
 const Tags = ({ data }) => {
-  const { courses } = data;
+  const { official, courses } = data;
   return (
     <Layout>
-      <h2>Courses</h2>
-      <CourseList courses={courses.nodes} />
+      {official ? (
+        <>
+          <h2>Official Resource</h2>
+          <MDXRenderer>{official.body}</MDXRenderer>
+        </>
+      ) : null}
+      {courses.totalCount ? (
+        <>
+          <h2>Courses</h2>
+          <CourseList courses={courses.nodes} />
+        </>
+      ) : null}
     </Layout>
   );
 };
