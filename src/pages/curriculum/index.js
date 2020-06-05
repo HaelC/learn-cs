@@ -16,6 +16,7 @@ export const query = graphql`
           school
           course_name
           course_number
+          slug
         }
       }
     }
