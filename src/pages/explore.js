@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import kebabCase from "lodash/kebabCase";
+import SEO from "../components/seo";
 
 export const query = graphql`
   query {
@@ -23,6 +24,7 @@ const Explore = ({
   group.sort((a, b) => b.totalCount - a.totalCount);
   return (
     <Layout>
+      <SEO title="Explore" description="Explore content within Learn CS" />
       <h2>TAGS</h2>
       <ul>
         {group.map(tag => (

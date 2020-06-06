@@ -4,6 +4,7 @@ import Layout from "../../components/layout";
 import School from "../../components/school";
 import { graphql } from "gatsby";
 import CourseList from "../../components/courseList";
+import SEO from "../../components/seo";
 
 export const query = graphql`
   query {
@@ -24,6 +25,10 @@ const CurriculumIndex = ({ data }) => {
   const courses = data.allMdx.nodes;
   return (
     <Layout>
+      <SEO
+        title="Curriculum"
+        description="Computer science curriculum provided by top universities: Stanford, CMU, MIT and UC Berkeley"
+      />
       <h2>Curriculum of Top Universities in Computer Science</h2>
       <h3 className="section-header">Universities</h3>
       <School url="/curriculum/stanford/" name="Stanford University" />

@@ -1,9 +1,14 @@
 import React from "react";
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 export default function About() {
   return (
     <Layout>
+      <SEO
+        title="About"
+        description="Something about Learn CS, and something about Hael"
+      />
       <h2>About Me</h2>
       <p>
         Hi there! This is Hael. I am a graduate student pursuing Master of

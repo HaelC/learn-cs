@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import CourseList from "../components/courseList";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import SEO from "../components/seo";
 
 export const query = graphql`
   query($tag: String) {
@@ -27,10 +28,12 @@ export const query = graphql`
   }
 `;
 
-const Tags = ({ data }) => {
+const Tags = ({ data, pageContext }) => {
   const { official, courses } = data;
+  const title = pageContext.tag === "Cpp" ? "C++" : pageContext.tag;
   return (
     <Layout>
+      <SEO title={title} />
       {official ? (
         <>
           <h2>Official Resource</h2>

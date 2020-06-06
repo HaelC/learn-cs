@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import CourseList from "../../components/courseList";
+import SEO from "../../components/seo";
 
 export const query = graphql`
   query {
@@ -29,6 +30,10 @@ const Stanford = ({ data }) => {
   const nodes = data.allMdx.nodes;
   return (
     <Layout>
+      <SEO
+        title="Stanford University"
+        description="Computer science curriculum in Stanford University"
+      />
       <h2>Stanford University</h2>
       <h3>Courses</h3>
       <p>
