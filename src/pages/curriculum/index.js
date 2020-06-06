@@ -7,10 +7,7 @@ import CourseList from "../../components/courseList";
 
 export const query = graphql`
   query {
-    allMdx(
-      filter: { frontmatter: { type: { eq: "course" } } }
-      sort: { fields: frontmatter___course_number }
-    ) {
+    allMdx(filter: { frontmatter: { type: { eq: "course" } } }) {
       nodes {
         frontmatter {
           school

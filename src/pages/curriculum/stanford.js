@@ -13,7 +13,6 @@ export const query = graphql`
           type: { eq: "course" }
         }
       }
-      sort: { fields: frontmatter___level }
     ) {
       nodes {
         frontmatter {
@@ -36,17 +35,6 @@ const Stanford = ({ data }) => {
         Here is the link of computer science courses at Stanford University.
         https://cs.stanford.edu/academics/courses
       </p>
-      {/* <ul>
-        {nodes.map(node => (
-          <li key={node.frontmatter.slug}>
-            <Link to={node.frontmatter.slug}>
-              {node.frontmatter.course_number +
-                " " +
-                node.frontmatter.course_name}
-            </Link>
-          </li>
-        ))}
-      </ul> */}
       <CourseList courses={nodes} />
       <h3>YouTube</h3>
       <p>

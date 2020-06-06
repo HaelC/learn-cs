@@ -8,6 +8,7 @@ slide:
 assignment:
 exam:
 slug:
+type:
 ---
 
 import { Link } from "gatsby";
