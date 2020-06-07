@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
         <main
           css={css`
             min-height: 85vh;
-            margin-bottom: 1rem;
+            margin: 0 0.5rem 1rem 0.5rem;
           `}
         >
           {children}

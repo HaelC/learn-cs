@@ -37,3 +37,9 @@ li {
 main a {
   color: #666;
 }
+
+.overview {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+}

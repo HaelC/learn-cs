@@ -34,12 +34,7 @@ const Tags = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={title} />
-      {official ? (
-        <>
-          <h2>Official Resource</h2>
-          <MDXRenderer>{official.body}</MDXRenderer>
-        </>
-      ) : null}
+      {official ? <MDXRenderer>{official.body}</MDXRenderer> : null}
       {courses.totalCount ? (
         <>
           <h2>Courses</h2>
