@@ -1,4 +1,5 @@
 ---
+school:
 course-number:
 course-name:
 level:
@@ -15,6 +16,6 @@ import { Link } from "gatsby";
 
 ### Website
 
-### Syllabus
+### Schedule
 
 ### Assignment

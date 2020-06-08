@@ -45,10 +45,13 @@ const CMU = ({ data }) => {
       </p>
       <CourseList courses={nodes} />
       <h2>Video</h2>
-      There is a platform powered by Panopto, where there are a lot of videos
-      available to public, including some of the latest videos (lecture,
-      seminar, etc) about computer science, most of which are about data science
-      and human-computer interaction. Might be useful if you are interested.
+      There is a{" "}
+      <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#sortColumn=1&sortAscending=false&maxResults=250">
+        video platform
+      </a>{" "}
+      powered by Panopto, where there are a lot of videos available to public,
+      including some of the latest videos (lecture, seminar, etc) about computer
+      science. Not so many, some of them might be useful if you are interested.
       <ul>
         <li>
           <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22a15edd8e-782f-4ea0-8923-ab3d01099269%22">
@@ -69,6 +72,16 @@ const CMU = ({ data }) => {
         <li>
           <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%222e05ff30-48ba-4598-9f70-a9430132b706%22">
             Fall 2018: 10-725 Convex Optimization
+          </a>
+        </li>
+        <li>
+          <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22a5862643-2416-49ef-b46b-13465d1b6df0%22">
+            Spring 2015: 15-418 Parallel Computer Architecture and Programming
+          </a>
+        </li>
+        <li>
+          <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22bcf8243e-cf18-481f-960f-3c5b26fbb69b%22">
+            Spring 2015: 15-251 Great Theoretical Ideas in Computer Science
           </a>
         </li>
       </ul>
