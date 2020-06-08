@@ -43,3 +43,9 @@ main a {
   background-color: #fafafa;
   border-radius: 10px;
 }
+
+blockquote footer {
+  color: #888;
+  text-align: right;
+  font-size: small;
+}

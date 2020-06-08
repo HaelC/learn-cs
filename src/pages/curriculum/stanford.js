@@ -34,14 +34,14 @@ const Stanford = ({ data }) => {
         title="Stanford University"
         description="Computer science curriculum in Stanford University"
       />
-      <h2>Stanford University</h2>
-      <h3>Courses</h3>
+      <h1>Stanford University</h1>
+      <h2>Courses</h2>
       <p>
         Here is the link of computer science courses at Stanford University.
         https://cs.stanford.edu/academics/courses
       </p>
       <CourseList courses={nodes} />
-      <h3>YouTube</h3>
+      <h2>YouTube</h2>
       <p>
         There are several YouTube channels about Stanford University. Here are
         the three channels that I know: <em>Stanford</em>,{" "}
@@ -67,7 +67,7 @@ const Stanford = ({ data }) => {
           </a>
         </li>
       </ul>
-      <h3>Stanford Online</h3>
+      <h2>Stanford Online</h2>
       <blockquote>
         Stanford Online offers you a front row seat to some of the brightest
         minds at Stanford. Our robust catalog of global and extended education
