@@ -49,3 +49,15 @@ blockquote footer {
   text-align: right;
   font-size: small;
 }
+
+.material {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0 0.2rem;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.material:first-of-type {
+  margin-left: 2rem;
+}
