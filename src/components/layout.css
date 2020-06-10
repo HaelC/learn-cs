@@ -58,6 +58,10 @@ blockquote footer {
   margin-left: 0.5rem;
 }
 
-.material:first-of-type {
+/* .material:first-of-type {
   margin-left: 2rem;
+} */
+
+td {
+  min-width: 108px;
 }
