@@ -55,13 +55,37 @@ blockquote footer {
   border-radius: 4px;
   padding: 0 0.2rem;
   text-decoration: none;
-  margin-left: 0.5rem;
 }
 
-/* .material:first-of-type {
-  margin-left: 2rem;
-} */
+/* make responsive table */
+/* reference: https://css-tricks.com/accessible-simple-responsive-tables/ */
 
-td {
-  min-width: 108px;
+.mTable {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.mTableCell {
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  text-align: center;
+}
+
+.mTable-3col .mTableCell {
+  width: 33.33%;
+}
+
+.mTable-4col .mTableCell {
+  width: 25%;
+}
+
+.mTable-5col .mTableCell {
+  width: 20%;
+}
+
+.mTable-6col .mTableCell {
+  width: 16.6%;
 }

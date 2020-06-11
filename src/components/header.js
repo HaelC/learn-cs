@@ -26,6 +26,7 @@ const Header = ({ siteTitle }) => (
   <header
     css={css`
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding: 1rem;
     `}
