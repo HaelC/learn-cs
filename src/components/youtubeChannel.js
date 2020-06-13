@@ -20,7 +20,7 @@ const YoutubeChannel = props => {
           }
         `}
       >
-        <a href={channel.link} target="_blank">
+        <a href={channel.link} target="_blank" rel="noreferrer">
           <img
             src={channel.avatar}
             alt="avatar"
@@ -37,7 +37,7 @@ const YoutubeChannel = props => {
           width: 88%;
         `}
       >
-        <a href={channel.link} target="_blank">
+        <a href={channel.link} target="_blank" rel="noreferrer">
           <h3>{channel.name}</h3>
         </a>
         <p>{channel.description}</p>
