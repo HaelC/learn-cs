@@ -32,9 +32,15 @@ const CurriculumIndex = ({ data }) => {
       <h1>Curriculum of Top Universities in Computer Science</h1>
       <h2 className="section-header">Universities</h2>
       <School url="/curriculum/stanford/" name="Stanford University" />
-      <School url="/mit/" name="Massachusetts Institute of Technology" />
+      <School
+        url="/curriculum/mit/"
+        name="Massachusetts Institute of Technology"
+      />
       <School url="/curriculum/cmu/" name="Carnegie Mellon University" />
-      <School url="/ucb/" name="University of California, Berkeley" />
+      <School
+        url="/curriculum/ucb/"
+        name="University of California, Berkeley"
+      />
       <p>
         Here I just list the top 4 cs universities. Might include more in the
         future.

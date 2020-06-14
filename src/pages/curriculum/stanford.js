@@ -52,17 +52,29 @@ const Stanford = ({ data }) => {
       </p>
       <ul>
         <li>
-          <a href="https://www.youtube.com/user/StanfordUniversity/playlists">
+          <a
+            href="https://www.youtube.com/user/StanfordUniversity/playlists"
+            target="_blank"
+            rel="noreferrer"
+          >
             Stanford
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/user/stanfordeng/playlists">
+          <a
+            href="https://www.youtube.com/user/stanfordeng/playlists"
+            target="_blank"
+            rel="noreferrer"
+          >
             Stanford University School of Engineering
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/user/stanfordonline/playlists">
+          <a
+            href="https://www.youtube.com/user/stanfordonline/playlists"
+            target="_blank"
+            rel="noreferrer"
+          >
             stanfordonline
           </a>
         </li>
