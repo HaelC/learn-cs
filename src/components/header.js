@@ -3,6 +3,12 @@ import PropTypes from "prop-types";
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGraduationCap,
+  faPhotoVideo,
+  faCompass,
+} from "@fortawesome/free-solid-svg-icons";
 
 const NavLink = styled(Link)`
   color: #222;
@@ -50,16 +56,16 @@ const Header = ({ siteTitle }) => (
     </Link>
     <nav>
       <NavLink to="/curriculum" activeClassName="current-page">
-        Curriculum
+        <FontAwesomeIcon icon={faGraduationCap} /> Curriculum
       </NavLink>
       {/* <NavLink to="/platform" activeClassName="current-page">
         Platform
       </NavLink> */}
       <NavLink to="/media" activeClassName="current-page">
-        Media
+        <FontAwesomeIcon icon={faPhotoVideo} /> Media
       </NavLink>
       <NavLink to="/explore" activeClassName="current-page">
-        Explore
+        <FontAwesomeIcon icon={faCompass} /> Explore
       </NavLink>
     </nav>
   </header>
