@@ -36,6 +36,10 @@ const UCB = ({ data }) => {
       <h1>University of California, Berkeley</h1>
       <h2>Courses</h2>
       <CourseList courses={nodes} />
+      <p>
+        Honestly, I am not familiar with University of California, Berkeley. The
+        only thing I know is its CS61A and CS61B are famous. That's it.
+      </p>
     </Layout>
   );
 };

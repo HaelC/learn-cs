@@ -89,3 +89,8 @@ blockquote footer {
 .mTable-6col .mTableCell {
   width: 16.6%;
 }
+
+.schedule thead tr {
+  text-align: center;
+  font-weight: bold;
+}
