@@ -80,6 +80,9 @@ const Layout = ({ children }) => {
             color: #999;
             display: flex;
             justify-content: center;
+            a {
+              color: #666;
+            }
           `}
         >
           © {new Date().getFullYear()} by&nbsp; <Link to="/about">Hael</Link>

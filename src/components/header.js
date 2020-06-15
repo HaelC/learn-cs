@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGraduationCap,
-  faPhotoVideo,
+  faDiceD6,
   faCompass,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => (
         Platform
       </NavLink> */}
       <NavLink to="/media" activeClassName="current-page">
-        <FontAwesomeIcon icon={faPhotoVideo} /> Media
+        <FontAwesomeIcon icon={faDiceD6} /> Media
       </NavLink>
       <NavLink to="/explore" activeClassName="current-page">
         <FontAwesomeIcon icon={faCompass} /> Explore
