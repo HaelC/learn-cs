@@ -3,6 +3,8 @@ tags: [Python]
 type: official
 ---
 
+import Highlight, { defaultProps } from "prism-react-renderer";
+
 ## Overview
 
 <blockquote class="overview" cite="https://docs.python.org/3/tutorial/index.html">
@@ -17,3 +19,92 @@ Python is an easy to learn, powerful programming language. It has efficient high
 - [Website](https://www.python.org)
 - [Tutorial](https://docs.python.org/3/tutorial/index.html)
 - [Documentation](https://docs.python.org/3/index.html)
+
+## Insight
+
+### Package/Environment Management
+
+#### pip
+
+<a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noreferrer">
+  pip
+</a> is the package installer for Python. Sometimes <code>pip</code> refers to either <code>
+  pip
+</code> or <code>pip3</code>. As Python 2 gets deprecated, hopefully it would
+not be ambiguous in the future.{" "}
+
+Generally you don't need to worry about <a href="https://pip.pypa.io/en/stable/installing/" target="_blank" rel="noreferrer">installation</a> of pip itself. And here are the common commands with <code>pip</code> (or <code>pip3</code>).
+
+```bash
+# install package
+pip install packageName         # latest version
+pip install packageName==1.0.0  # specific version
+pip install packageName>=2.0.0  # minimum version
+
+# install a list of requirements specified in a file
+pip install -r requirements.txt
+
+# update package
+pip install --upgrade [packageName]
+
+# remove package
+pip uninstall [packageName]
+```
+
+For more information, visit <a href="https://pip.pypa.io/en/stable/user_guide/" target="_blank" rel="noreferrer">User Guide</a> and <a href="https://pip.pypa.io/en/stable/reference/" target="_blank" rel="noreferrer">Reference Guide</a> on pip <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noreferrer">documentation</a>.
+
+#### Virtual Environment
+
+When working with multiple projects, you may encounter version conflict problem: some project requires a specific version of a package, while another project requires another version. Virtual environment helps to solve that issue: you can create different virtual environments for different projects.
+
+Newer versions of Python comes with `venv`, so it's handy to create virtual environment directly.
+
+```bash
+# create a virtual environment
+python3 -m venv tutorial-env
+
+# activate a virtual environment after creating one
+tutorial-env\Scripts\activate.bat   # on Windows
+source tutorial-env/bin/activate    # on Unix or MacOS
+
+# deactivate the virtual environment after activating
+deactivate
+```
+
+Here is the <a href="https://docs.python.org/3/library/venv.html" target="_blank" rel="noreferrer">documentation</a> of `venv`.
+
+Besides, there're also <code><a href="https://virtualenv.pypa.io/en/stable/" target="_blank" rel="noreferrer">virtualenv</a></code> which is more powerful than `venv`, and <code><a href="https://pipenv.pypa.io/en/latest/" target="_blank" rel="noreferrer">Pipenv</a></code> which combines `pip` and `virtualenv`.
+
+#### Anaconda
+
+Anaconda makes it easier to manage packages and environments. Anaconda® is a package manager, an environment manager, a Python/R data science distribution, and a collection of over 7,500+ open-source packages. Anaconda is free and easy to install, and it offers free community support. You can <a href="https://www.anaconda.com/products/individual" target="_blank" rel="noreferrer">download it</a> free.
+
+Personally, I'd recommend using Anaconda because:
+
+- it includes almost all packages you need, you don't have to install them manually
+- it protects your system environment, especially if you are using macOS
+
+### Data science
+
+Python plays an important role in data science. It is worth of another page to discuss data science. Here I'll just list some of the packages related to data science.
+
+#### Data and computing
+
+- NumPy
+- pandas
+- SciPy
+
+#### Data Visualization
+
+- Matplotlib
+- Seaborn
+
+#### Machine Learning
+
+- Scikit-Learn
+- NLTK
+
+#### Deep Learning
+
+- TensorFlow
+- PyTorch
