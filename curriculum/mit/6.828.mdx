@@ -1,0 +1,735 @@
+---
+school: Massachusetts Institute of Technology
+course-number: "6.828"
+course-name: Operating System Engineering
+level: 2
+tags: [Operating System]
+video: true
+slide: true
+assignment: true
+exam: true
+slug: /mit/6.828
+type: course
+---
+
+import { Link } from "gatsby";
+
+### Website
+
+- Fall 2019 (latest) <a href="https://pdos.csail.mit.edu/6.828/2019/index.html" target="_blank" rel="noreferrer">website</a> slides ✅ | assignments ✅ | exams ✅
+- OCW (Fall 2012) <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/index.htm" target="_blank" rel="noreferrer">Course Home</a> slides ✅ | assignments ✅ | exams ✅
+
+### Overview
+
+<blockquote cite="https://pdos.csail.mit.edu/6.828/2019/overview.html">
+  Design and implementation of operating systems, and their use as a foundation
+  for systems programming. Topics include virtual memory; file systems; threads;
+  context switches; kernels; interrupts; system calls; interprocess
+  communication; coordination, and interaction between software and hardware. A
+  multi-processor operating system for RISC-V, xv6, is used to illustrate these
+  topics. Individual laboratory assignments involve extending the xv6 operating
+  system, for example to support sophisticated virtual memory features and
+  network protocols
+</blockquote>
+
+**Prerequisites**: 6.004
+
+### Schedule
+
+<table class="schedule">
+  <thead>
+    <tr>
+      <td>Lec</td>
+      <td>Content</td>
+      <td>Preparation</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-overview.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Introduction
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-overview/"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          examples
+        </a>{" "}
+        (handouts:{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          xv6 book
+        </a>
+        )
+      </td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Read chapter 1 of the xv6 book
+        </a>{" "}
+        (for your amusement:{" "}
+        <a
+          href="https://www.youtube.com/watch?v=tc4ROCJYbm0"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Unix
+        </a>
+        )
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-allocator.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Dynamic memory allocation
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/malloc.c"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          allocators
+        </a>
+        )
+      </td>
+      <td>
+        5.1 (Pointers and addresses) through 5.6 (Pointer arrays) and 6.4
+        (pointers to structures), and 8.7 (Storage Allocator) by Kernighan and
+        Ritchie (K&amp;R)
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/gdb_slides.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          gdb
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/pointers.c"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          pointers example
+        </a>
+        )
+      </td>
+      <td>Read 2.9 (Bitwise operators) by K&amp;R</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-internal.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Isolation &amp; system call entry/exit
+        </a>{" "}
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "Chapter 2: Operating system organization"
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-vm.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Virtual memory (1)
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "Chapter 3: Page Tables"
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-usevm.md"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Virtual memory (2)
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-usingvm.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          slides
+        </a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-interrupt.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          System calls, interrupts, exceptions
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "Traps and device drivers" and the related xv6 source files
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-lockv2.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Multiprocessors and locking
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-locks.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          slides
+        </a>
+        )
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "Locking"
+        </a>{" "}
+        with spinlock.c
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-threads.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Processes and switching
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "Scheduling"
+        </a>{" "}
+        up to "Sleep and wakeup" and proc.c, swtch.S
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-coordination.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          sleep&amp;wakeup;
+        </a>
+      </td>
+      <td>
+        Read remainder of{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/xv6/book-riscv-rev0.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "Scheduling"
+        </a>
+        , and corresponding parts of proc.c
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-riscv.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Calling conventions and stack frames RISC-V
+        </a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-fs.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          File systems
+        </a>
+      </td>
+      <td>
+        Read bio.c, fs.c, sysfile.c, file.c and "File system" except for the
+        logging sections
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-crash.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Crash recovery
+        </a>
+      </td>
+      <td>Read log.c and the logging sections of "File system"</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-journal.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          File system performance and fast crash recovery
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/journal-ext2fs.html"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Journaling the Linux ext2fs Filesystem (1998)
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-vm-again.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Virtual Memory (3)
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-vm-again.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          slides
+        </a>
+        )
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/appel-li.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Virtual Memory Primitives for User Programs (1991)
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-organization.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          OS Organization
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/engler95exokernel.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Exokernel (1995)
+        </a>
+        , <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/faq-exokernel.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          FAQ
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-networking.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          OS and Networking
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/mogul96usenix.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Receive Livelock (1996)
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/biscuit.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Kernels and HLL
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/biscuit.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          the Biscuit paper (2018)
+        </a>
+        , <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/faq-biscuit.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          FAQ
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-scalable-lock.md"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Scalable locks
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-mcs.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          slides
+        </a>
+        ) (<a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/scalable-lock-code.c"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          code
+        </a>)
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/linux-lock.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Non-scalable locks paper (2012)
+        </a>
+        , <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/faq-locks.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          FAQ
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-rcu.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          RCU notes
+        </a>
+        , <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-rcu.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          2018 slides
+        </a>
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/rcu-decade-later.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          RCU paper (2013)
+        </a>
+        , <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/rcu-faq.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          FAQ
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-vmware.txt"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Virtual Machines (1)
+        </a>{" "}
+        (
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/lec/l-vmware.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          slides
+        </a>
+        )
+      </td>
+      <td>
+        Read{" "}
+        <a
+          href="https://pdos.csail.mit.edu/6.828/2019/readings/adams06vmware.pdf"
+          class="material"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Software vs Hardware Virtualization (2006)
+        </a>{" "}
+        or Disco?
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Assignments
+
+1. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/util.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab util: Unix utilities
+   </a>
+2. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/sh.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab sh: Simple shell
+   </a>
+3. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/alloc.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab alloc: Memory allocator
+   </a>
+4. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/lazy.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab lazy: Lazy allocation
+   </a>
+5. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/cow.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab cow: Copy-on-write fork
+   </a>
+6. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/syscall.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab syscall: Uthread &amp; alarm
+   </a>
+7. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/lock.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab lock: Parallelism/locking
+   </a>
+8. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/fs.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab fs: File system
+   </a>
+9. <a
+     href="https://pdos.csail.mit.edu/6.828/2019/labs/mmap.html"
+     class="material"
+     target="_blank"
+     rel="noreferrer"
+   >
+     Lab mmap: Mmap
+   </a>
+10. <a
+      href="https://pdos.csail.mit.edu/6.828/2019/labs/net.html"
+      class="material"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Lab net: Network stack
+    </a>
+
+### What's Next
+
+<Link to="/mit/6.824">6.824 Distributed Systems</Link>
