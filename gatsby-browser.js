@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+require("prismjs/plugins/command-line/prism-command-line.css");
+//require("prismjs/themes/prism.css")
+require("prismjs/themes/prism-okaidia.css");

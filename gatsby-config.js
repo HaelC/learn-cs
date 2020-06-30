@@ -41,6 +41,25 @@ module.exports = {
         defaultLayout: {
           default: require.resolve("./src/components/layout.js"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: "›",
+              aliases: { js: "javascript", sh: "bash" },
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+            },
+          },
+        ],
       },
     },
     {
