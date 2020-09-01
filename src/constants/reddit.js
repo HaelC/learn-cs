@@ -14,8 +14,7 @@ const subreddits = [
   {
     slogan: "CS Career Questions",
     r: "r/cscareerquestions/",
-    avatar:
-      "cscareerquestions.png",
+    avatar: "cscareerquestions.png",
     description:
       "A subreddit for those with questions about working in the tech industry or in a computer-science-related job.",
   },
@@ -49,16 +48,14 @@ const subreddits = [
   {
     slogan: "Memes and jokes about everything programming and CS",
     r: "r/ProgrammerHumor",
-    avatar:
-      "ProgrammerHumor.png",
+    avatar: "ProgrammerHumor.png",
     description:
       "Dedicated to humor and jokes relating to programmers and programming.",
   },
   {
     slogan: "programming",
     r: "r/programming",
-    avatar:
-      "programming.png",
+    avatar: "programming.png",
     description: "Computer Programming",
   },
   {
@@ -70,16 +67,14 @@ const subreddits = [
   {
     slogan: "webdev: reddit for web developers",
     r: "r/webdev",
-    avatar:
-      "webdev.png",
+    avatar: "webdev.png",
     description:
       "A community dedicated to all things web development: both front-end and back-end. For more design-related questions, try /r/web_design.",
   },
   {
     slogan: "web_design",
     r: "r/web_design",
-    avatar:
-      "web_design.png",
+    avatar: "web_design.png",
     description:
       "A community dedicated to all things web design. For more development-related questions, try /r/webdev.",
   },
