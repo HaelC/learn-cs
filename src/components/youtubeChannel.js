@@ -22,7 +22,7 @@ const YoutubeChannel = props => {
       >
         <a href={channel.link} target="_blank" rel="noreferrer">
           <img
-            src={channel.avatar}
+            src={`avatars/youtube/${channel.avatar}`}
             alt="avatar"
             css={css`
               max-width: 100%;

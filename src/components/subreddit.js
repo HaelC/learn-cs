@@ -22,7 +22,7 @@ const Subreddit = ({ subreddit }) => {
         <a href={link} target="_blank" rel="noreferrer">
           {subreddit.avatar ? (
             <img
-              src={subreddit.avatar}
+              src={`avatars/reddit/${subreddit.avatar}`}
               alt="avatar"
               css={css`
                 width: 100%;

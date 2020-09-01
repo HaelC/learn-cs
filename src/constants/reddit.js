@@ -15,7 +15,7 @@ const subreddits = [
     slogan: "CS Career Questions",
     r: "r/cscareerquestions/",
     avatar:
-      "https://styles.redditmedia.com/t5_2sdpm/styles/communityIcon_u6zl61vcy9511.png?width=256&s=c175de99213f30466ec007fc18704a0414f97c9e",
+      "cscareerquestions.png",
     description:
       "A subreddit for those with questions about working in the tech industry or in a computer-science-related job.",
   },
@@ -50,7 +50,7 @@ const subreddits = [
     slogan: "Memes and jokes about everything programming and CS",
     r: "r/ProgrammerHumor",
     avatar:
-      "https://styles.redditmedia.com/t5_2tex6/styles/communityIcon_u89jf60zv7p41.png?width=256&s=291ef0574ce6193e7093c9a9bc1a3f80e1e69631",
+      "ProgrammerHumor.png",
     description:
       "Dedicated to humor and jokes relating to programmers and programming.",
   },
@@ -58,7 +58,7 @@ const subreddits = [
     slogan: "programming",
     r: "r/programming",
     avatar:
-      "https://styles.redditmedia.com/t5_2fwo/styles/communityIcon_1bqa1ibfp8q11.png?width=256&s=45361614cdf4a306d5510b414d18c02603c7dd3c",
+      "programming.png",
     description: "Computer Programming",
   },
   {
@@ -71,7 +71,7 @@ const subreddits = [
     slogan: "webdev: reddit for web developers",
     r: "r/webdev",
     avatar:
-      "https://styles.redditmedia.com/t5_2qs0q/styles/communityIcon_5ey8lzmwmxp21.png?width=256&s=5a85d5c682f40e3cf317c560b219585ac0afce78",
+      "webdev.png",
     description:
       "A community dedicated to all things web development: both front-end and back-end. For more design-related questions, try /r/web_design.",
   },
@@ -79,7 +79,7 @@ const subreddits = [
     slogan: "web_design",
     r: "r/web_design",
     avatar:
-      "https://styles.redditmedia.com/t5_2qh1m/styles/communityIcon_cpdgauc6r8g01.png?width=256&s=cbb79c27efefde431fc712a9911f66310caf1cc8",
+      "web_design.png",
     description:
       "A community dedicated to all things web design. For more development-related questions, try /r/webdev.",
   },
