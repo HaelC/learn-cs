@@ -30,7 +30,7 @@ const IndexPage = () => (
             font-size: 28px;
           `}
         >
-          Stay Safe & Healthy
+          {"Stay Safe & Healthy"}
         </div>
       </div>
       <div
@@ -48,7 +48,7 @@ const IndexPage = () => (
             font-size: 28px;
           `}
         >
-          Keep Learning
+          {"Keep Learning"}
         </div>
       </div>
     </div>

@@ -1,0 +1,30 @@
+.topic-header {
+  position: absolute;
+  left: 0;
+  top: 3.5rem;
+  width: 100vw;
+  height: 30vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-header .headline {
+  width: 60%;
+  padding: 0 30px;
+}
+
+.topic-header .headline h3 {
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+.topic-content {
+  margin-top: 30vh;
+  padding-top: 20px;
+}
+
+.topic-content p {
+  line-height: 1.6;
+}
