@@ -3,22 +3,23 @@ import Layout from "../../../components/layout";
 import SEO from "../../../components/seo";
 import "../topic.css";
 import gettingStartedBackground from "../../../images/background/gettingStarted.jpg";
-// import { graphql, useStaticQuery } from "gatsby";
 import { css } from "@emotion/core";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
-// export const query = graphql`
-//   query {
-//     image: file(relativePath: { eq: "background/gettingStarted.jpg" }) {
-//       sharp: childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query {
+    image: file(relativePath: { eq: "getting-started/TIOBE.png" }) {
+      sharp: childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-const gettingStarted = () => {
+const gettingStarted = ({ data }) => {
   return (
     <Layout>
       <SEO title="Getting Started" />
@@ -72,17 +73,24 @@ const gettingStarted = () => {
         <p>
           Just like human languages, there are various programming languages as
           well. You might have heard some of them: C, C++, Java, JavaScript,
-          Python, Go, etc.
+          Python, Go, etc. And here is the diagram of{" "}
+          <a href="https://www.tiobe.com/tiobe-index/" target="_blank">
+            TIOBE Index for September 2020
+          </a>
+          :
         </p>
-        <p>
-          Here are some suggestions to choose which programming language to
-          learn:
-        </p>
+        <Img
+          fluid={data.image.sharp.fluid}
+          alt="TIOBE Programming Language Ranking"
+        />
+        <p>Some suggestions to choose which programming language to learn:</p>
         <ul>
           <li>
             If you are going to learn your first programming language, then
             there are 3 programming languages that are taught most in
-            introductory programming courses at university: C, Java and Python.
+            introductory programming courses at university: C, Java and Python
+            (coincidentally match the top 3 among TIOBE Programming Community
+            Index).
             <ul>
               <li>
                 Compared with Java and Python, C is relatively a lower level
@@ -97,7 +105,23 @@ const gettingStarted = () => {
               <li>
                 Java is one of the most widely-used programming languages around
                 the world. It provides abundant APIs (application programming
-                interface) and strong community support.
+                interface) and strong community support. It is an
+                object-oriented programming language, which helps you to grasp
+                the idea of OOP when learning Java. Java's basic syntax is
+                almost the same as C's, and once you gain the knowledge of
+                Java/C, it is easy to transfer your knowledge to other C-family
+                programming languages like C++ and Go.
+              </li>
+              <li>
+                Python has been gaining ongoing popularity recently, and many
+                universities start to use Python in the introductory programming
+                courses.{" "}
+                <q cite="https://wiki.python.org/moin/BeginnersGuide/Overview">
+                  Python uses an elegant syntax, making the programs you write
+                  easier to read. And it is an easy-to-use language that makes
+                  it simple to get your program working.
+                </q>{" "}
+                Python has
               </li>
             </ul>
           </li>

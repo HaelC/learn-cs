@@ -28,3 +28,7 @@
 .topic-content p {
   line-height: 1.6;
 }
+
+li q {
+  quotes: none;
+}
