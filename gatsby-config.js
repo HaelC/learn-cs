@@ -51,7 +51,7 @@ module.exports = {
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
-              noInlineHighlight: false,
+              noInlineHighlight: true,
               prompt: {
                 user: "root",
                 host: "localhost",
