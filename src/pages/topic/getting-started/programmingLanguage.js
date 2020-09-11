@@ -13,15 +13,8 @@ function ProgrammingLanguage() {
       <p>
         Just like human languages, there are various programming languages as
         well. You might have heard some of them: C, C++, Java, JavaScript,
-        Python, Go, etc. And here is the diagram of{" "}
-        <a
-          href="https://www.tiobe.com/tiobe-index/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          TIOBE Index for September 2020
-        </a>
-        :
+        Python, Go, etc. Different programming languages have different pros and
+        cons, and programmers have different preferences.
       </p>
       <TopLanguages />
     </div>
