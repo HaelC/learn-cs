@@ -6,7 +6,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
       content: allMdx(
-        filter: { frontmatter: { type: { nin: ["official"] } } }
+        filter: { frontmatter: { type: { nin: ["official", "glossary"] } } }
       ) {
         nodes {
           frontmatter {
@@ -18,6 +18,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       tagsGroup: allMdx {
         group(field: frontmatter___tags) {
           fieldValue
+        }
+      }
+      glossary: allMdx(filter: { frontmatter: { type: { eq: "glossary" } } }) {
+        nodes {
+          frontmatter {
+            tag
+          }
         }
       }
     }
@@ -46,6 +53,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve(`./src/templates/tags.js`),
       context: {
         tag: tag.fieldValue,
+      },
+    });
+  });
+
+  const glossary = result.data.glossary.nodes;
+  glossary.forEach(gloss => {
+    createPage({
+      path: `glossary/${_.kebabCase(gloss.frontmatter.tag)}`,
+      component: require.resolve(`./src/templates/glossary.js`),
+      context: {
+        tag: gloss.frontmatter.tag,
       },
     });
   });
