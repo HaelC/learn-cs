@@ -46,28 +46,29 @@ const Explore = ({ data }) => {
       >
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <Link to={`/tag/${kebabCase(tag.fieldValue)}`}>
-              <div
-                css={css`
-                  height: 32px;
-                  display: flex;
-                  align-items: center;
-                `}
-              >
+            <div
+              css={css`
+                height: 32px;
+                display: flex;
+                align-items: center;
+              `}
+            >
+              <Link to={`/tag/${kebabCase(tag.fieldValue)}`}>
                 {icons[tag.fieldValue] ? (
                   <Img fixed={icons[tag.fieldValue].fixed} />
                 ) : (
                   <Img fixed={icons.Default.fixed} />
                 )}
-                <span
-                  css={css`
-                    padding-left: 10px;
-                  `}
-                >
-                  {tag.fieldValue === "Cpp" ? "C++" : tag.fieldValue}
-                </span>
-              </div>
-            </Link>
+              </Link>
+              <Link
+                to={`/tag/${kebabCase(tag.fieldValue)}`}
+                css={css`
+                  margin-left: 10px;
+                `}
+              >
+                {tag.fieldValue === "Cpp" ? "C++" : tag.fieldValue}
+              </Link>
+            </div>
             {/* ({tag.totalCount}) */}
           </li>
         ))}
